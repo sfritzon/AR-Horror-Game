@@ -61,33 +61,53 @@ Shader "UI/FlashlightOverlay"
 
             half4 frag(Varyings IN) : SV_Target
             {
-                // Center of the screen
                 float2 center = float2(0.5, 0.5);
-
-                // Distance from the center
                 float2 offset = IN.uv - center;
 
-                // Prevent the flashlight from becoming oval
-                // on different phone aspect ratios
+                // Correct the circle for portrait/wide screens
                 offset.x *= _ScreenParams.x / _ScreenParams.y;
 
                 float distanceFromCenter = length(offset);
 
-                // Transparent inside the flashlight,
-                // black outside, with a soft transition.
-                float darkness = smoothstep(
+                // Brightest part of the flashlight
+                float centerRadius = _Radius * 0.35;
+
+                // Gradual falloff across the whole beam
+                float beamFalloff = smoothstep(
+                    centerRadius,
+                    _Radius,
+                    distanceFromCenter
+                );
+
+                // Camera is mostly visible in the center,
+                // but becomes darker toward the flashlight edge.
+                float flashlightDarkness = lerp(
+                    0.15,
+                    0.35,
+                    beamFalloff
+                );
+
+                // Transition from flashlight into the dark room
+                float outsideTransition = smoothstep(
                     _Radius,
                     _Radius + _Softness,
                     distanceFromCenter
                 );
 
+                // IMPORTANT:
+                // Outside is dark, but not completely black.
+                float roomDarkness = 0.72;
+
+                float finalDarkness = lerp(
+                    flashlightDarkness,
+                    roomDarkness,
+                    outsideTransition
+                );
+
                 half4 color = _Color;
-                
-                    float flashlightDarkness = 0.9;
+                color.a *= finalDarkness;
 
-                    color.a *= lerp(flashlightDarkness, 1.0, darkness);
-
-                    return color;
+                return color;
             }
 
             ENDHLSL
