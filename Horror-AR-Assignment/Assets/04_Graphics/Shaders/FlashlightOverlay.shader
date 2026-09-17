@@ -82,11 +82,8 @@ Shader "UI/FlashlightOverlay"
                 );
 
                 half4 color = _Color;
-
-                    // Even inside the flashlight, keep some darkness.
-                    // 0.0 = completely clear
-                    // 1.0 = completely black
-                    float flashlightDarkness = 0.35;
+                
+                    float flashlightDarkness = 0.9;
 
                     color.a *= lerp(flashlightDarkness, 1.0, darkness);
 
