@@ -1137,7 +1137,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CollectibleManager
   collectibleText: {fileID: 1134420473}
   totalCollectibles: 3
-  jumpScareImage: {fileID: 500693122}
+  jumpScarePrefab: {fileID: 2911597060502401789, guid: 04f7a9876908a5f41adfac2b9668eaab, type: 3}
+  jumpScareDistance: 0.7
 --- !u!4 &345126636
 Transform:
   m_ObjectHideFlags: 0
