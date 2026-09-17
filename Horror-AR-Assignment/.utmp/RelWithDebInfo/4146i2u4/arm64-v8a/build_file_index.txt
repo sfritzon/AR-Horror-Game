@@ -1,0 +1,2 @@
+C:\Users\sfrit\Documents\UnityProjects\AR-Horror-Game\Horror-AR-Assignment\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Users\sfrit\Documents\UnityProjects\AR-Horror-Game\Horror-AR-Assignment\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

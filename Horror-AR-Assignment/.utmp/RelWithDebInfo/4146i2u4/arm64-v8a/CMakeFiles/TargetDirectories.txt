@@ -1,0 +1,5 @@
+C:/Users/sfrit/Documents/UnityProjects/AR-Horror-Game/Horror-AR-Assignment/.utmp/RelWithDebInfo/4146i2u4/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/sfrit/Documents/UnityProjects/AR-Horror-Game/Horror-AR-Assignment/.utmp/RelWithDebInfo/4146i2u4/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/Users/sfrit/Documents/UnityProjects/AR-Horror-Game/Horror-AR-Assignment/.utmp/RelWithDebInfo/4146i2u4/arm64-v8a/GameActivity/CMakeFiles/game.dir
+C:/Users/sfrit/Documents/UnityProjects/AR-Horror-Game/Horror-AR-Assignment/.utmp/RelWithDebInfo/4146i2u4/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+C:/Users/sfrit/Documents/UnityProjects/AR-Horror-Game/Horror-AR-Assignment/.utmp/RelWithDebInfo/4146i2u4/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
