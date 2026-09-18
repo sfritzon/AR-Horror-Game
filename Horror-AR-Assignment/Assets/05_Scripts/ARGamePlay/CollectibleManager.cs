@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollectibleManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text collectibleText;
+    [SerializeField] private TMP_Text objectiveText;
     [SerializeField] private int totalCollectibles = 3;
 
     [Header("Jumpscare")]
@@ -36,6 +37,15 @@ public class CollectibleManager : MonoBehaviour
     {
         collectibleText.text =
             $"Items found: {collectedCount}/{totalCollectibles}";
+
+        if (collectedCount >= totalCollectibles)
+        {
+            objectiveText.text = "All objects found!";
+        }
+        else
+        {
+            objectiveText.text = "Find 3 objects";
+        }
     }
 
     private void ShowJumpScare()
