@@ -1,10 +1,10 @@
 # ninja log v5
-57	2208	8113365394508067	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	e460a2b368ac6972
-34	2237	8113365394866798	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	150418fda77aa180
-71	2314	8113365395641020	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	805490ac3f1b1e5d
-1	2318	8113365395641020	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	efd4851948cb03b8
-11	2434	8113365396875243	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	b586eb99e362fa34
-84	2643	8113365398957101	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	6cf2af7334fc6972
-45	2690	8113365399457838	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	a8fde0f6c2b852f2
-22	2871	8113365401256031	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	8ed731c79431fcc1
-2872	3071	8113365403288872	C:/Users/sfrit/Documents/UnityProjects/AR-Horror-Game/Horror-AR-Assignment/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4146i2u4/obj/arm64-v8a/libgame.so	94b0b7fe8a188009
+51	1465	8113504237209255	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	e460a2b368ac6972
+31	1477	8113504237239432	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	150418fda77aa180
+73	1529	8113504237856933	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	805490ac3f1b1e5d
+1	1534	8113504237882212	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	efd4851948cb03b8
+23	1584	8113504238418129	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	b586eb99e362fa34
+61	1732	8113504239883692	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	6cf2af7334fc6972
+41	1767	8113504240259463	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	a8fde0f6c2b852f2
+12	1869	8113504241245696	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	8ed731c79431fcc1
+1869	2033	8113504242902342	C:/Users/sfrit/Documents/UnityProjects/AR-Horror-Game/Horror-AR-Assignment/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4146i2u4/obj/arm64-v8a/libgame.so	94b0b7fe8a188009

@@ -82,8 +82,8 @@ Shader "UI/FlashlightOverlay"
                 // Camera is mostly visible in the center,
                 // but becomes darker toward the flashlight edge.
                 float flashlightDarkness = lerp(
-                    0.15,
-                    0.35,
+                    0.50,
+                    0.80,
                     beamFalloff
                 );
 
@@ -96,7 +96,7 @@ Shader "UI/FlashlightOverlay"
 
                 // IMPORTANT:
                 // Outside is dark, but not completely black.
-                float roomDarkness = 0.72;
+                float roomDarkness = 0.99;
 
                 float finalDarkness = lerp(
                     flashlightDarkness,
