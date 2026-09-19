@@ -1,6 +1,8 @@
 using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine;
+using System.Collections;
+
 
 public class CollectibleManager : MonoBehaviour
 {
@@ -11,6 +13,7 @@ public class CollectibleManager : MonoBehaviour
     [Header("Jumpscare")]
     [SerializeField] private GameObject jumpScarePrefab;
     [SerializeField] private float jumpScareDistance = 0.7f;
+    [SerializeField] private AudioClip jumpScareSound;
 
     private int collectedCount = 0;
 
@@ -54,6 +57,13 @@ public class CollectibleManager : MonoBehaviour
 
         if (arCamera == null || jumpScarePrefab == null)
             return;
+        
+        if (jumpScareSound != null)
+        {
+            AudioSource.PlayClipAtPoint(
+                jumpScareSound,
+                arCamera.transform.position);
+        }
 
         Vector3 spawnPosition =
             arCamera.transform.position +
@@ -80,6 +90,34 @@ public class CollectibleManager : MonoBehaviour
             rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
         }
+        StartCoroutine(MoveJumpscare(ghost, arCamera));
+    }
+    private IEnumerator MoveJumpscare(GameObject ghost, Camera arCamera)
+    {
+        float duration = 0.4f;
+        float timer = 0f;
+
+        Vector3 startPosition = ghost.transform.position;
+
+        while (timer < duration)
+        {
+            timer += Time.deltaTime;
+
+            Vector3 targetPosition =
+                arCamera.transform.position +
+                arCamera.transform.forward * 0.2f;
+
+            ghost.transform.position = Vector3.Lerp(
+                startPosition,
+                targetPosition,
+                timer / duration);
+
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(0.5f);
+
+        Destroy(ghost);
     }
 #if UNITY_EDITOR
     private void Update()

@@ -1140,6 +1140,7 @@ MonoBehaviour:
   totalCollectibles: 3
   jumpScarePrefab: {fileID: 2911597060502401789, guid: 04f7a9876908a5f41adfac2b9668eaab, type: 3}
   jumpScareDistance: 0.7
+  jumpScareSound: {fileID: 8300000, guid: 0ac81be63891a46fab673abfa2d0e96f, type: 3}
 --- !u!4 &345126636
 Transform:
   m_ObjectHideFlags: 0
