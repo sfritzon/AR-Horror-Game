@@ -9,13 +9,14 @@ public class CollectibleManager : MonoBehaviour
     [SerializeField] private TMP_Text collectibleText;
     [SerializeField] private TMP_Text objectiveText;
     [SerializeField] private int totalCollectibles = 3;
+    [SerializeField] private GameObject startPanel;
     
 
     [Header("Win UI")]
     [SerializeField] private GameObject winPanel;
     [Header("Jumpscare")]
     [SerializeField] private GameObject jumpScarePrefab;
-    [SerializeField] private float jumpScareDistance = 0.7f;
+    [SerializeField] private float jumpScareDistance = 0.8f;
     [SerializeField] private AudioClip jumpScareSound;
 
     private int collectedCount = 0;
@@ -23,6 +24,16 @@ public class CollectibleManager : MonoBehaviour
     private void Start()
     {
         UpdateText();
+
+        collectibleText.gameObject.SetActive(false);
+        objectiveText.gameObject.SetActive(false);
+    }
+    public void StartGame()
+    {
+        startPanel.SetActive(false);
+
+        collectibleText.gameObject.SetActive(true);
+        objectiveText.gameObject.SetActive(true);
     }
 
     public void CollectItem()
