@@ -2,14 +2,17 @@ using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 
 public class CollectibleManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text collectibleText;
     [SerializeField] private TMP_Text objectiveText;
     [SerializeField] private int totalCollectibles = 3;
+    
 
+    [Header("Win UI")]
+    [SerializeField] private GameObject winPanel;
     [Header("Jumpscare")]
     [SerializeField] private GameObject jumpScarePrefab;
     [SerializeField] private float jumpScareDistance = 0.7f;
@@ -93,6 +96,7 @@ public class CollectibleManager : MonoBehaviour
         StartCoroutine(MoveJumpscare(ghost, arCamera));
     }
     private IEnumerator MoveJumpscare(GameObject ghost, Camera arCamera)
+    
     {
         float duration = 0.4f;
         float timer = 0f;
@@ -118,6 +122,15 @@ public class CollectibleManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         Destroy(ghost);
+
+        if (winPanel != null)
+        {
+            winPanel.SetActive(true);
+        }
+    }
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 #if UNITY_EDITOR
     private void Update()
