@@ -421,9 +421,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 995ac79d42e8c5340a60d21526e82f42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectibleManager
-  collectibleText: {fileID: 0}
-  objectiveText: {fileID: 0}
-  startPanel: {fileID: 0}
 --- !u!4 &1034098020
 Transform:
   m_ObjectHideFlags: 0
